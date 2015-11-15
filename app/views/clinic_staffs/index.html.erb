@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Clinic Staffs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Clinic</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Speciality</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clinic_staffs.each do |clinic_staff| %>
+      <tr>
+        <td><%= clinic_staff.clinic_id %></td>
+        <td><%= clinic_staff.name %></td>
+        <td><%= clinic_staff.description %></td>
+        <td><%= clinic_staff.speciality %></td>
+        <td><%= link_to 'Show', clinic_staff %></td>
+        <td><%= link_to 'Edit', edit_clinic_staff_path(clinic_staff) %></td>
+        <td><%= link_to 'Destroy', clinic_staff, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Clinic staff', new_clinic_staff_path %>

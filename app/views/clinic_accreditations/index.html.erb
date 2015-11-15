@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Clinic Accreditations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Clinic</th>
+      <th>Accreditation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clinic_accreditations.each do |clinic_accreditation| %>
+      <tr>
+        <td><%= clinic_accreditation.clinic_id %></td>
+        <td><%= clinic_accreditation.accreditation_id %></td>
+        <td><%= link_to 'Show', clinic_accreditation %></td>
+        <td><%= link_to 'Edit', edit_clinic_accreditation_path(clinic_accreditation) %></td>
+        <td><%= link_to 'Destroy', clinic_accreditation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Clinic accreditation', new_clinic_accreditation_path %>

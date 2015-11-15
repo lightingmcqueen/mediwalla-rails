@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Clinic Images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clinic_images.each do |clinic_image| %>
+      <tr>
+        <td><%= link_to 'Show', clinic_image %></td>
+        <td><%= link_to 'Edit', edit_clinic_image_path(clinic_image) %></td>
+        <td><%= link_to 'Destroy', clinic_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Clinic image', new_clinic_image_path %>

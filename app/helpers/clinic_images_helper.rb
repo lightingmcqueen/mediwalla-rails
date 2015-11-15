@@ -1,0 +1,2 @@
+module ClinicImagesHelper
+end

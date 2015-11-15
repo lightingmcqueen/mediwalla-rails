@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Clinic:</strong>
+  <%= @clinic_accreditation.clinic_id %>
+</p>
+
+<p>
+  <strong>Accreditation:</strong>
+  <%= @clinic_accreditation.accreditation_id %>
+</p>
+
+<%= link_to 'Edit', edit_clinic_accreditation_path(@clinic_accreditation) %> |
+<%= link_to 'Back', clinic_accreditations_path %>

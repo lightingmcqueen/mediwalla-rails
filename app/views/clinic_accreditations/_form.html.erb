@@ -1,0 +1,25 @@
+<%= form_for(@clinic_accreditation) do |f| %>
+  <% if @clinic_accreditation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@clinic_accreditation.errors.count, "error") %> prohibited this clinic_accreditation from being saved:</h2>
+
+      <ul>
+      <% @clinic_accreditation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :clinic_id %><br>
+    <%= f.number_field :clinic_id %>
+  </div>
+  <div class="field">
+    <%= f.label :accreditation_id %><br>
+    <%= f.number_field :accreditation_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

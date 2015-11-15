@@ -1,0 +1,240 @@
+ <div class="page-top clearfix">
+   <div class="container">
+    <!--page main heading-->
+    <nav class="bread-crumb">
+     <ul class="breadcrumb clearfix">
+      <li><a href="#">Home</a><span class="divider"></span></li>
+      <li class="active">Dentistry</li>
+    </ul>
+  </nav>
+  <h1 class="title">Dentistry across the world</h1>
+</div>
+</div>
+<div class="main clearfix">
+ <div class="container">
+  <div class="row">
+   <!--sidebar-->
+   <div class="col-lg-3 col-md-4">
+    <aside class="sidebar clearfix">
+     <!--categories-->
+     <section class="widget widget_categories">
+      <h3 class="title">Country</h3>
+      <ul id="country-filters">
+       <li><label class="radio" for="radio1">
+        <input type="radio" value="" id="radio1" data-toggle="radio" checked="">
+        All Destinations
+      </label>
+    </li>
+    <li> <label class="checkbox" for="checkbox2">
+      <input type="checkbox" value="" id="checkbox2" data-toggle="checkbox">
+      Brazil (3 clinics)
+    </label>
+  </li>
+  <li><label class="checkbox" for="checkbox2">
+    <input type="checkbox" value="" id="checkbox3" data-toggle="checkbox">
+    United Arab Emirates (12 clinics)
+  </label>
+</li>
+<li><label class="checkbox" for="checkbox2">
+  <input type="checkbox" value="" id="checkbox4" data-toggle="checkbox">
+  United Kingdom (28 clinics)
+</label>
+</li>
+<li><label class="checkbox" for="checkbox2">
+  <input type="checkbox" value="" id="checkbox5" data-toggle="checkbox">
+  Spain (19 clinics)
+</label>
+</li><li><label class="checkbox" for="checkbox2">
+<input type="checkbox" value="" id="checkbox6" data-toggle="checkbox">
+Switzerland (8 clinics)
+</label>
+</li><li><label class="checkbox" for="checkbox2">
+<input type="checkbox" value="" id="checkbox7" data-toggle="checkbox">
+Thailand (7 clinics)
+</label>
+</li>
+</ul>
+<a href="#" class="see-more-toggle see-all">+ See all</a>
+</section>
+
+<section class="widget widget_categories">
+  <h3 class="title">Popular Dentistry Procedures</h3>
+  <ul id="procedure-filters">
+   <li><label class="checkbox" for="checkbox1">
+    <input type="checkbox" checked="checked" value="" id="checkbox1" data-toggle="checkbox">
+    Dental Implant <small>(152)</small>
+  </label>
+</li>
+<li> <label class="checkbox" for="checkbox2">
+  <input type="checkbox"  value="" id="checkbox2" data-toggle="checkbox">
+  Crowns <small>(12)</small>
+</label>
+</li>
+<li><label class="checkbox" for="checkbox2">
+  <input type="checkbox" checked="checked" value="" id="checkbox3" data-toggle="checkbox" checked="">
+  Teeth Whitening <small>(2)</small>
+</label>
+</li>
+<li><label class="checkbox" for="checkbox2">
+  <input type="checkbox" value="" id="checkbox4" data-toggle="checkbox">
+  Tooth Extraction <small>(15)</small>
+</label>
+</li>
+<li><label class="checkbox" for="checkbox2">
+  <input type="checkbox" value="" id="checkbox5" data-toggle="checkbox" checked="">
+  Root Canal <small>(15)</small>
+</label>
+</li>
+</ul>
+<a href="#" class="see-more-toggle see-all">+ See all</a>
+</section>
+<section class="widget widget_categories">
+  <h3 class="title">Facilities</h3>
+  <ul id="facility-filters">
+   <li><label class="checkbox" for="checkbox1">
+    <input type="checkbox" value="" id="checkbox1" data-toggle="checkbox">
+    Free Wifi <small>(152)</small>
+  </label>
+</li>
+<li> <label class="checkbox" for="checkbox2">
+  <input type="checkbox"  value="" data-toggle="checkbox">
+  Hotel Booking <small>(12)</small>
+</label>
+</li>
+<li><label class="checkbox" for="checkbox2">
+  <input type="checkbox" value="" data-toggle="checkbox">
+  Airport Pickup <small>(2)</small>
+</label>
+</li>
+<li><label class="checkbox" for="checkbox2">
+  <input type="checkbox" value="" data-toggle="checkbox">
+  Tooth Extraction <small>(15)</small>
+</label>
+</li>
+<li><label class="checkbox" for="checkbox2">
+  <input type="checkbox" value="" data-toggle="checkbox">
+  Online Doctor Consultation <small>(15)</small>
+</label>
+</li>
+</ul>
+<a href="#" class="see-more-toggle see-all">+ See all</a>
+</section>
+</aside>
+</div>
+<div class="col-lg-9 col-md-8">
+  <div class="row page-info">
+    <div class="col-lg-8 col-md-8">
+      <h4 class="sub-title">189 Clinics across the world</h4>
+    </div>
+    <div class="col-lg-4 col-md-4">
+      <div class="pull-right">
+        <span>Sort by:</span>
+        <select>
+          <option>Best Match</option>
+          <option>Number of Procedures</option>
+          <option>Review Scores</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <% @clinics.each do |clinic| %>
+  <div class="list-group">
+   <div class="row">
+    <div class="col-lg-5 col-md-5">
+     <figure>
+      <a href="detail.html" title="Dr.Andrew Bert">
+        <%= image_tag('clinics/1.jpg') %>  
+        
+      </a>
+    </figure>
+  </div>
+  <div class="col-lg-7 col-md-7">
+   <h4> <a href="/hospitals/<%= clinic.id%>"><%= clinic.name%></a></h4>
+   <p><%= clinic.address_line_1 %></p>
+   <div class="review">
+    <ul class="rating">
+     <li class="starred"><span><b>★</b></span></li>
+     <li class="starred"><span><b>★</b></span></li>
+     <li class="starred"><span><b>★</b></span></li>
+     <li class="starred"><span><b>★</b></span></li>
+     <li><span><b>★</b></span></li>
+   </ul>
+   <span>14 reviews</span>
+ </div>
+ <p class="entry-summary">
+  Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur.
+</p>
+<div class="procedure-price">$1.660</div>
+<a class="read-more red pull-right" href="#">Contact Clinic</a>
+<a href="#" class="btn-link"><i class="fa fa-heart-o"></i>Favorite</a>
+</div>
+</div>
+</div>
+<% end %>
+
+
+<div class="show-more">
+  <a href="#" class="">Show More</a>
+
+</div>
+                  <!-- <div class="clearfix">
+                    <div class="pull-left">
+                        <p>Display 1 - 15 of 156 results</p>
+                    </div>
+                  <div class="pagination pull-right">
+            <span class="page-numbers current">1</span>
+            <a class="page-numbers" href="#">2</a>
+            <a class="page-numbers" href="#">3</a>
+            <a class="page-numbers" href="#">4</a>
+            <a class="next page-numbers" href="#"> &gt; </a></div>
+          </div> -->
+          <div class="related-gallery-items">
+            <h3 class="subtitle">Recently Viewed Clinics</h3>
+            <hr>
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <article class="common clearfix hentry">
+                  <a href="#" title="Blood Pressure Checkup">
+                    <%=image_tag("gallery/1.jpg", alt: "", class: "")%>
+                  </a>
+                  <div class="content clearfix">
+                    <h5><a href="#">SANI DENTAL GROUP - PLATNIUM</a></h5>
+                    <p>Los Algodones, Mexico</p>
+
+                  </div>
+                </article>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6 ">
+                <article class="common clearfix hentry">
+                 <a href="#" title="Blood Pressure Checkup">
+                  <%=image_tag("gallery/1.jpg", alt: "", class: "")%>
+                </a>
+                <div class="content clearfix">
+                  <h5><a href="#">Albusdent</a></h5>
+                  <p>Krakow, Poland</p>
+
+                </div>
+              </article>
+            </div>
+            <div class="visible-sm clearfix"></div>
+            <div class="col-lg-4 col-md-4 col-sm-6 ">
+              <article class="common clearfix hentry">
+                <a href="#" title="Blood Pressure Checkup">
+                  <%=image_tag("gallery/1.jpg", alt: "", class: "")%>
+                </a>
+                <div class="content clearfix">
+                  <h5><a href="#">Costa Rica Bluezone Guanacaste</a></h5>
+                  <p>Guanacaste, Costa Rica</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,57 @@
+<%= form_for(@procedure) do |f| %>
+  <% if @procedure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@procedure.errors.count, "error") %> prohibited this procedure from being saved:</h2>
+
+      <ul>
+      <% @procedure.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :clinic_id %><br>
+    <%= f.number_field :clinic_id %>
+  </div>
+  <div class="field">
+    <%= f.label :procedure_category_id %><br>
+    <%= f.number_field :procedure_category_id %>
+  </div>
+  <div class="field">
+    <%= f.label :procedure_subcategory_id %><br>
+    <%= f.number_field :procedure_subcategory_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :overview %><br>
+    <%= f.text_field :overview %>
+  </div>
+  <div class="field">
+    <%= f.label :procedure_before %><br>
+    <%= f.text_field :procedure_before %>
+  </div>
+  <div class="field">
+    <%= f.label :procedure_after %><br>
+    <%= f.text_field :procedure_after %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :hospital_time %><br>
+    <%= f.text_field :hospital_time %>
+  </div>
+  <div class="field">
+    <%= f.label :abroad_time %><br>
+    <%= f.text_field :abroad_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

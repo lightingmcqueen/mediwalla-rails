@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  clinic_admin_id: 1
+  name: MyString
+  description: MyString
+  services: MyString
+  address_line_1: MyString
+  address_line_2: MyString
+  city: MyString
+  country_id: 1
+  zipcode_string: MyString
+  coordinator: MyString
+  ratings: MyString
+
+two:
+  clinic_admin_id: 1
+  name: MyString
+  description: MyString
+  services: MyString
+  address_line_1: MyString
+  address_line_2: MyString
+  city: MyString
+  country_id: 1
+  zipcode_string: MyString
+  coordinator: MyString
+  ratings: MyString

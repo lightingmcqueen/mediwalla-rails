@@ -1,0 +1,36 @@
+<%= form_for @clinic_staff,  html: { multipart: true } do |f| %>
+  <% if @clinic_staff.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@clinic_staff.errors.count, "error") %> prohibited this clinic_staff from being saved:</h2>
+
+      <ul>
+      <% @clinic_staff.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :clinic_id %><br>
+    <%= f.number_field :clinic_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :speciality %><br>
+    <%= f.text_field :speciality %>
+  </div>
+  
+  <%= f.file_field :image %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

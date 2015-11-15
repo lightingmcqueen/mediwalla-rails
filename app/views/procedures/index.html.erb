@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Procedures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Clinic</th>
+      <th>Procedure category</th>
+      <th>Procedure subcategory</th>
+      <th>Name</th>
+      <th>Overview</th>
+      <th>Procedure before</th>
+      <th>Procedure after</th>
+      <th>Price</th>
+      <th>Hospital time</th>
+      <th>Abroad time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @procedures.each do |procedure| %>
+      <tr>
+        <td><%= procedure.clinic_id %></td>
+        <td><%= procedure.procedure_category_id %></td>
+        <td><%= procedure.procedure_subcategory_id %></td>
+        <td><%= procedure.name %></td>
+        <td><%= procedure.overview %></td>
+        <td><%= procedure.procedure_before %></td>
+        <td><%= procedure.procedure_after %></td>
+        <td><%= procedure.price %></td>
+        <td><%= procedure.hospital_time %></td>
+        <td><%= procedure.abroad_time %></td>
+        <td><%= link_to 'Show', procedure %></td>
+        <td><%= link_to 'Edit', edit_procedure_path(procedure) %></td>
+        <td><%= link_to 'Destroy', procedure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Procedure', new_procedure_path %>
