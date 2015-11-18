@@ -1,4 +1,5 @@
 Rails.application.configure do
+  Paperclip.options[:command_path] = 'C:\Program Files\ImageMagick-6.9.2-Q16'  
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -38,4 +39,5 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  
 end

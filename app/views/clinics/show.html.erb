@@ -55,5 +55,13 @@
   <%= @clinic.ratings %>
 </p>
 
+<% @clinic.clinic_images do |picture| %> 
+<%= picture.image_file_name %>
+
+
+<%= image_tag picture.image_url(:thumb) %>
+<% end %>
+
+
 <%= link_to 'Edit', edit_clinic_path(@clinic) %> |
 <%= link_to 'Back', clinics_path %>

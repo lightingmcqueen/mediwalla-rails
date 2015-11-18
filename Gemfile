@@ -54,3 +54,6 @@ gem 'rails_admin'
 gem 'devise'
 
 gem 'paperclip'
+
+
+gem 'jquery-fileupload-rails'

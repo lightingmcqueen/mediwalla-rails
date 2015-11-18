@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151114160831) do
+ActiveRecord::Schema.define(version: 20151117201712) do
 
   create_table "accreditations", force: :cascade do |t|
     t.string   "name"
@@ -49,12 +49,17 @@ ActiveRecord::Schema.define(version: 20151114160831) do
   add_index "clinic_admins", ["reset_password_token"], name: "index_clinic_admins_on_reset_password_token", unique: true
 
   create_table "clinic_images", force: :cascade do |t|
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "images_file_name"
+    t.string   "images_content_type"
+    t.integer  "images_file_size"
+    t.datetime "images_updated_at"
+    t.integer  "clinic_id"
   end
 
   create_table "clinic_services", force: :cascade do |t|
