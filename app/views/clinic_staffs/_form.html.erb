@@ -13,7 +13,8 @@
 
   <div class="field">
     <%= f.label :clinic_id %><br>
-    <%= f.number_field :clinic_id %>
+
+    <%= select("clinic_staff", "clinic_id", Clinic.all.collect {|p| [ p.name, p.id ] },) %>
   </div>
   <div class="field">
     <%= f.label :name %><br>
@@ -27,7 +28,7 @@
     <%= f.label :speciality %><br>
     <%= f.text_field :speciality %>
   </div>
-  
+  <%= image_tag @clinic_staff.image.url(:thumb) %>
   <%= f.file_field :image %>
 
   <div class="actions">

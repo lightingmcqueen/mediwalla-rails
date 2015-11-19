@@ -9,10 +9,42 @@
 	<!--banner-->
 <!-- 	<div class="page-top clearfix">
 		<div class="container">
- -->			<!--page main heading-->
-			<%= yield %>
+		-->			<!--page main heading-->
+
 <!-- 		</div>
 	</div>
- -->	<%= render partial: "layouts/footer" %>
+-->
+
+<div class="page-top clearfix">
+	<div class="container">
+		<!--page main heading-->
+		<div class="row">
+
+
+			<div class="col-lg-3 col-md-4">
+				<aside class="sidebar clearfix">
+
+					<!--categories-->
+					<section class="widget box">
+						<h3 class="title">My Account</h3>
+						<ul>
+							<li><a href="my-account.html">My Profile</a></li>
+							<li><a href="my-reviews.html">My Reviews</a></li>
+							<li class="active"><a href="edit-profile.html">Edit Profile</a></li>
+							<li><a href="change-pwd.html">Change Password</a></li>
+						</ul>
+					</section>
+					<!--tags-->
+				</aside>
+			</div>
+			<div class="col-lg-9 col-md-8">
+					<%= yield %>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<%= render partial: "layouts/footer" %>
 </body>
 </html>

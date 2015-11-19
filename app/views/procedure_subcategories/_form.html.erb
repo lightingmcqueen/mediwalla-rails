@@ -13,7 +13,8 @@
 
   <div class="field">
     <%= f.label :procedure_category_id %><br>
-    <%= f.number_field :procedure_category_id %>
+    <%= select("procedure_subcategory", "procedure_category_id", ProcedureCategory.all.collect {|p| [ p.name, p.id ] },) %>
+    
   </div>
   <div class="field">
     <%= f.label :name %><br>

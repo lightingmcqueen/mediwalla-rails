@@ -19,7 +19,8 @@
   <strong>Speciality:</strong>
   <%= @clinic_staff.speciality %>
 </p>
-<%= image_tag @clinic_staff.image.url %>
+<%= image_tag @clinic_staff.image.url(:thumb) %>
+
 
 <%= link_to 'Edit', edit_clinic_staff_path(@clinic_staff) %> |
 <%= link_to 'Back', clinic_staffs_path %>

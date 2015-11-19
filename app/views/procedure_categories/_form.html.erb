@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= text_area(:procedure_category, :description, cols: 10, rows: 5)   %>
   </div>
   <div class="actions">
     <%= f.submit %>

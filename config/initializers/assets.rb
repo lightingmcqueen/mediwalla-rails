@@ -11,6 +11,8 @@ Rails.application.config.assets.precompile += %w( swipebox.css )
 Rails.application.config.assets.precompile += %w( meanmenu.css )
 Rails.application.config.assets.precompile += %w( main.css )
 Rails.application.config.assets.precompile += %w( custom-responsive.css )
+Rails.application.config.assets.precompile += %w( dropzone/spritemap.png )
+Rails.application.config.assets.precompile += %w( dropzone/spritemap@2x.png )
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path

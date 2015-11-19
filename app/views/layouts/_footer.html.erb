@@ -86,7 +86,7 @@
       </footer>
       <a href="#top" id="scroll-top"></a>
        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
 
     <script type="text/javascript">
 
@@ -876,14 +876,14 @@ $(window).scroll(function() {
   //                });
                  
 
-$('#myAffix').affix({
-  offset: {
-    top: 100,
-    bottom: function () {
-      return (this.bottom = $('footer').outerHeight(true))
-    }
-  }
-})
+// $('#myAffix').affix({
+//   offset: {
+//     top: 100,
+//     bottom: function () {
+//       return (this.bottom = $('footer').outerHeight(true))
+//     }
+//   }
+// })
 
 
 });
@@ -891,9 +891,21 @@ $('#myAffix').affix({
 })(jQuery);
 
 
+$(document).ready(function(){
+    $('.jquery-datatables').DataTable();
+});
+
 
 
 
 
 
 </script>
+
+ 
+
+  <script>
+      $(function() {
+          $('textarea').froalaEditor()
+      });
+  </script>

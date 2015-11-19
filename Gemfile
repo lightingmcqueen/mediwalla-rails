@@ -57,3 +57,9 @@ gem 'paperclip'
 
 
 gem 'jquery-fileupload-rails'
+
+gem 'dropzonejs-rails'
+
+
+gem "wysiwyg-rails"
+
