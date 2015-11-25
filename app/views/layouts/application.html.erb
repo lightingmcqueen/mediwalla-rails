@@ -7,13 +7,8 @@
 <body>
 	<%= render partial: "layouts/mast_head" %>
 	<!--banner-->
-<!-- 	<div class="page-top clearfix">
-		<div class="container">
-		-->			<!--page main heading-->
-
-<!-- 		</div>
-	</div>
--->
+	<% if user_signed_in? %>
+ 	
 
 <div class="page-top clearfix">
 	<div class="container">
@@ -44,6 +39,19 @@
 		</div>
 	</div>
 </div>
+
+	<% else %>
+
+<div class="page-top clearfix">
+		<div class="container">
+					<!--page main heading-->
+			<%= yield %>
+ 		</div>
+	</div>
+
+
+
+<% end %>
 
 <%= render partial: "layouts/footer" %>
 </body>
